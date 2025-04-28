@@ -225,18 +225,41 @@ label {
 
 @media (max-width: 480px) {
     #scheduler-widget h2 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Adjust heading size for smaller screens */
     }
 
     label {
-        font-size: 0.8rem;
+        font-size: 0.8rem; /* Adjust label font size */
     }
 
     #scheduler-widget input, 
     #scheduler-widget button {
-        font-size: 0.9rem;
-        padding: 8px;
+        max-width: 95%;
+        font-size: 0.9rem; /* Adjust input and button font size */
+        padding: 8px; /* Adjust padding for smaller screens */
     }
+
+    .inline-group {
+        flex-direction: column; /* Ensure inputs stack vertically */
+        gap: 10px;
+    }
+
+    .inline-group div {
+        width: 100%; /* Inputs take full width */
+    }
+
+    #scheduler-widget {
+        min-width: 75%; /* Widget takes 90% of the body width */
+        
+    }
+
+    #color-scheme-selector {
+        position: fixed;
+        bottom: 10px;
+        right: 10%;
+        z-index: 1000;
+    }
+
     #color-dropdown {
         bottom: 70px;
         right: 5px;
